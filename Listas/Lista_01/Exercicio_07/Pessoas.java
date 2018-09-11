@@ -1,10 +1,12 @@
+import java.util.ArrayList;
+
 public class Pessoas {
   private String nome;
   private String sexo;
   private int idade;
   private double altura;
   private double peso;
-  private String historicoConsultas;
+  private ArrayList<String> historicoConsultas = new ArrayList<String>();
 
   public Pessoas (){};
 
@@ -12,6 +14,16 @@ public class Pessoas {
     this.nome = nome;
     this.altura = altura;
     this.peso = peso;
+  }
+
+  public void setHistoricoConsultas(String consultas){
+    historicoConsultas.add(consultas);
+  }
+
+  public void GetHistoricoConsultas(){
+    for(int i = 0; i < historicoConsultas.size(); i++){
+      System.out.println(historicoConsultas.get(i));
+    }
   }
 
   public double imc(){
