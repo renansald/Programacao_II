@@ -105,17 +105,19 @@ public class Data {
       resto = resto%30;
       return ("Faltam "+newAno+" anos e "+ newMes+" mes, "+resto+" dias, "+newhora+" horas, "+newminutos+" minutos, "+resto1+" segundos");
     }
-    else if((dias2 >= dias1) && (horas2 < horas1)){
+    else if((dias2 > dias1) && (horas2 < horas1)){
       dias2 = dias2 - dias1;
       horas2 = horas1 - horas2;
       int newhora = 23 - (horas2/3600);
       int resto1 = horas2%3600;
       int newminutos =  60 - ((resto1)/60);
-      if(newminutos == 60)
-      newminutos = 0;
-      resto1 = 60 - (resto1%60);
+      resto1 = 60 -(resto1%60);
       if(resto1 == 60)
       resto1 = 0;
+      if(resto1 > 0)
+      newminutos--;
+      if(newminutos == 60)
+      newminutos = 0;
       int newAno = dias2/365;
       int resto = dias2%365;
       int newMes = resto/30;

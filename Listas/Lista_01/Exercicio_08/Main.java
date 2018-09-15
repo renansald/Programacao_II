@@ -10,7 +10,7 @@ public class Main {
     Comodo banheiro = new Comodo();
     Comodo quarto = new Comodo();
     casa.addPortaBanheiro(p1, 0);
-    casa.addPortaQuarto(p2, 0);
+    casa.addPortaQuarto(p1, 0);
     casa.addPortaBanheiro(p2, 1);
     casa.addPortaBanheiro(p1, 2);
     kitnet.addPortaBanheiro(p2, 0);
